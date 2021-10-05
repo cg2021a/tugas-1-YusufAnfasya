@@ -1,21 +1,21 @@
 # tugas-1-YusufAnfasya
 tugas-1-YusufAnfasya created by GitHub Classroom
 
-## Nama Benda : Kacamata
+## Nama Benda : Kunci Kamar
 
 ## Angle Depan 
-![depan](DepanAtasKacamata.jpg)
+![depan](DepanAtas.jpg)
 
 
 ## Angle Kanan 
-![depan](KananAtasKacamata.jpg)
+![depan](KananAtas.jpg)
 
 
 ## Angle Kiri 
-![depan](KiriAtasKacamata.jpg)
+![depan](KiriAtas.jpg)
 
 
 ## Angle Belakang 
-![depan](BelakangAtasKacamata.jpg)
+![depan](BelakangAtas.jpg)
 
 Terimakasih
