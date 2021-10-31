@@ -17,8 +17,13 @@
         function main() {
           const canvas = document.querySelector('#c');
           const renderer = new THREE.WebGLRenderer({canvas});
+          
           renderer.shadowMap.enabled = true;
           renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
+
+          renderer.outputEncoding = THREE.sRGBEncoding;
+          renderer.toneMapping = THREE.ACEFilmicToneMapping;
+          renderer.toneMappingExposure = 1.25;
 
           const fov = 45;
           const aspect = 2;  // the canvas default
@@ -81,10 +86,17 @@
           //shadow
           {
             const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
-            const material = new THREE.MeshPhongMaterial( 
+            
+            const material = new THREE.MeshPhysicalMaterial( 
               { 
                 color: `#fed271`,
-                // reflectivity : 10
+                reflectivity: 1,
+                clearcoat: 1.0 ,
+                metalness : 0.9,
+                clearcoatRoughness : 0.1,
+                Roughness : 0.5,
+                
+
               } );
             const torus = new THREE.Mesh( geometry, material );
             torus.receiveShadow = true;
@@ -95,7 +107,7 @@
       
 
           {
-            const light = new THREE.PointLight( 0xffffff, 1, 100 );
+            const light = new THREE.PointLight( 0xffffff, 1, 40 );
             light.position.set( 0, 10, 10 );
             light.castShadow = true; // default false
             scene.add( light );
