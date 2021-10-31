@@ -76,8 +76,19 @@
         });
 				
         scene.add( light );
-        for(let i = 1; i <= 150; i++)
-            createCube();
+        let batas = 50;
+        // setTimeout();
+        var id = setInterval(timing,4000);
+        let i = 1
+        function timing(){
+            // if(i == 50)
+            // {
+            //     clearInterval(id);
+            // }
+            for(; i <= 10; i++){
+                createCube();
+            }
+        }
         cubes.forEach((cube) => scene.add(cube));
         
         // create the renderer   
