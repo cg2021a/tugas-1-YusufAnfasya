@@ -86,7 +86,6 @@
           //shadow
           {
             const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
-            
             const material = new THREE.MeshPhysicalMaterial( 
               { 
                 color: `#fed271`,
@@ -105,7 +104,7 @@
           }
 
       
-
+          //point light shadow
           {
             const light = new THREE.PointLight( 0xffffff, 1, 40 );
             light.position.set( 0, 10, 10 );
@@ -169,7 +168,7 @@
               const boxCenter = box.getCenter(new THREE.Vector3());
 
               // set the camera to frame the box
-              frameArea(boxSize * 1, boxSize, boxCenter, camera);
+              frameArea(boxSize * 5, boxSize, boxCenter, camera);
 
               // update the Trackball controls to handle the new size
               controls.maxDistance = boxSize * 10;
