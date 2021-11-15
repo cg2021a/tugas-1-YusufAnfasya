@@ -10,9 +10,15 @@
 <body onload="main()">
     <h2>Kunci Kamar | Tugas 1 Grafika Komputer</h2>
     <h2>Yusuf Anfasya - 05111940000077</h2>
-    <canvas id="myCanvas" width="1200" height="600" style="border: 3px solid rgb(20, 20, 20);">
+    <canvas id="myCanvas" width="800" height="600" style="border: 3px solid rgb(20, 20, 20);">
     </canvas>
-    
+    <script id="fragmentShaderCode" type="notjs">
+        precision mediump float;
+        varying vec3 v_Color;
+        void main(){
+            gl_FragColor = vec4(v_Color, 1.0);
+        }
+    </script>
 </body>
 </html>
 
